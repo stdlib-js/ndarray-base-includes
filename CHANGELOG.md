@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-11)
+## Unreleased (2025-09-18)
 
 <section class="features">
 
@@ -45,6 +45,7 @@
 
 <details>
 
+-   [`a3e7978`](https://github.com/stdlib-js/stdlib/commit/a3e79786217bf1c9a84875203251af82cc93a222) - **docs:** update markup _(by Athan Reines)_
 -   [`76ea5a8`](https://github.com/stdlib-js/stdlib/commit/76ea5a8e8d964f78aa953ae4822345d3c1e3a6ae) - **feat:** add missing tests to `ndarray/base/includes` [(#7304)](https://github.com/stdlib-js/stdlib/pull/7304) _(by Muhammad Haris, Athan Reines)_
 -   [`f7cf8ed`](https://github.com/stdlib-js/stdlib/commit/f7cf8ed8066b7b2fe18a9b9bc6ed1226eb1cc1ea) - **fix:** use resolved order when computing loop variables _(by Athan Reines)_
 -   [`1ad09d5`](https://github.com/stdlib-js/stdlib/commit/1ad09d5c9437c763081275186e7517d3739da988) - **chore:** update package meta data [(#6576)](https://github.com/stdlib-js/stdlib/pull/6576) _(by stdlib-bot)_

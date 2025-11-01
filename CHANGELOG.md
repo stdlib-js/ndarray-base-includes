@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-18)
+## Unreleased (2025-11-01)
 
 <section class="features">
 
@@ -33,6 +33,7 @@
 
 ### Bug Fixes
 
+-   [`186033e`](https://github.com/stdlib-js/stdlib/commit/186033e3cccf7faffaad1c101404de68f688027e) - address off-by-one bug
 -   [`f7cf8ed`](https://github.com/stdlib-js/stdlib/commit/f7cf8ed8066b7b2fe18a9b9bc6ed1226eb1cc1ea) - use resolved order when computing loop variables
 
 </section>
@@ -45,6 +46,7 @@
 
 <details>
 
+-   [`186033e`](https://github.com/stdlib-js/stdlib/commit/186033e3cccf7faffaad1c101404de68f688027e) - **fix:** address off-by-one bug _(by Athan Reines)_
 -   [`a3e7978`](https://github.com/stdlib-js/stdlib/commit/a3e79786217bf1c9a84875203251af82cc93a222) - **docs:** update markup _(by Athan Reines)_
 -   [`76ea5a8`](https://github.com/stdlib-js/stdlib/commit/76ea5a8e8d964f78aa953ae4822345d3c1e3a6ae) - **feat:** add missing tests to `ndarray/base/includes` [(#7304)](https://github.com/stdlib-js/stdlib/pull/7304) _(by Muhammad Haris, Athan Reines)_
 -   [`f7cf8ed`](https://github.com/stdlib-js/stdlib/commit/f7cf8ed8066b7b2fe18a9b9bc6ed1226eb1cc1ea) - **fix:** use resolved order when computing loop variables _(by Athan Reines)_

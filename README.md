@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@esm/index.mjs';
+import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@v0.1.0-esm/index.mjs';
 ```
 
 #### includes( arrays )
@@ -138,7 +138,7 @@ Each provided ndarray should be an object with the following properties:
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@esm/index.mjs';
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@esm/index.mjs';
+import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@v0.1.0-esm/index.mjs';
 
 var x = {
     'dtype': 'generic',

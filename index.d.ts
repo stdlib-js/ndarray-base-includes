@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,18 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { ArrayLike } from '@stdlib/types/array';
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Test whether an ndarray contains a specified value.
+* Tests whether an ndarray contains a specified value.
 *
-* @module @stdlib/ndarray-base-includes
+* @param arrays - array-like object containing an input ndarray and a zero-dimensional search element ndarray
+* @returns boolean indicating whether an ndarray contains a specified value
 *
 * @example
 * var Float64Array = require( '@stdlib/array-float64' );
-* var includes = require( '@stdlib/ndarray-base-includes' );
+* var ndarray = require( '@stdlib/ndarray-ctor' );
+* var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
 *
-* // Create a data buffer:
+* // Create data buffers:
 * var xbuf = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
 *
 * // Define the shape of the input array:
@@ -39,36 +46,21 @@
 * // Define the index offset:
 * var ox = 0;
 *
-* // Create the input ndarray-like object:
-* var x = {
-*     'dtype': 'float64',
-*     'data': xbuf,
-*     'shape': shape,
-*     'strides': sx,
-*     'offset': ox,
-*     'order': 'row-major'
-* };
+* // Create the input ndarray:
+* var x = ndarray( 'float64', xbuf, shape, sx, ox, 'row-major' );
 *
-* // Create the search element ndarray-like object:
-* var searchElement = {
-*     'dtype': 'float64',
-*     'data': new Float64Array( [ 2.0 ] ),
-*     'shape': [],
-*     'strides': [ 0 ],
-*     'offset': 0,
-*     'order': 'row-major'
-* };
+* // Create a zero-dimensional ndarray containing a search element:
+* var v = scalar2ndarray( 6.0, {
+*     'dtype': 'float64'
+* });
 *
 * // Perform reduction:
-* var out = includes( [ x, searchElement ] );
+* var out = includes( [ x, v ] );
 * // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function includes( arrays: ArrayLike<ndarray> ): boolean;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = includes;

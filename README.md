@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@deno/mod.js';
+import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@v0.1.1-deno/mod.js';
 ```
 
 #### includes( arrays )
@@ -133,7 +133,7 @@ Each provided ndarray should be an object with the following properties:
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@deno/mod.js';
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@deno/mod.js';
+import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@v0.1.1-deno/mod.js';
 
 var x = {
     'dtype': 'generic',

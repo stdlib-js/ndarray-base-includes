@@ -41,14 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-includes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@esm/index.mjs';
+var includes = require( '@stdlib/ndarray-base-includes' );
 ```
 
 #### includes( arrays )
@@ -58,7 +76,7 @@ Tests whether an ndarray contains a specified value.
 <!-- eslint-disable max-len -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Create a data buffer:
 var xbuf = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
@@ -130,15 +148,10 @@ Each provided ndarray should be an object with the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@esm/index.mjs';
-import includes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-includes@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-base-to-array' );
+var includes = require( '@stdlib/ndarray-base-includes' );
 
 var x = {
     'dtype': 'generic',
@@ -164,10 +177,6 @@ console.log( 'Search element: %d', v.data[ 0 ] );
 
 var out = includes( [ x, v ] );
 console.log( out );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -176,7 +185,111 @@ console.log( out );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+Character codes for data types:
+
+<!-- The following is auto-generated. Do not manually edit. See scripts/loops.js. -->
+
+<!-- charcodes -->
+
+-   **x**: `bool` (boolean).
+-   **z**: `complex128` (double-precision floating-point complex number).
+-   **c**: `complex64` (single-precision floating-point complex number).
+-   **f**: `float32` (single-precision floating-point number).
+-   **d**: `float64` (double-precision floating-point number).
+-   **k**: `int16` (signed 16-bit integer).
+-   **i**: `int32` (signed 32-bit integer).
+-   **s**: `int8` (signed 8-bit integer).
+-   **t**: `uint16` (unsigned 16-bit integer).
+-   **u**: `uint32` (unsigned 32-bit integer).
+-   **b**: `uint8` (unsigned 8-bit integer).
+
+<!-- ./charcodes -->
+
+Function name suffix naming convention:
+
+```text
+stdlib_ndarray_includes_<input_data_type><search_element_data_type>_<output_data_type>[_as_<input_cast_data_type><search_element_cast_data_type>_<output_data_type>]
+```
+
+For example,
+
+<!-- run-disable -->
+
+```c
+void stdlib_ndarray_includes_dd_x(...) {...}
+```
+
+is a function which accepts one double-precision floating-point input ndarray, a double-precision floating-point search element ndarray, and one boolean output ndarray.
+
+TODO: document casting convention
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/ndarray/base/includes.h"
+```
+
+<!-- The following is auto-generated. Do not manually edit. See scripts/*loops.js. -->
+
+<!-- loops -->
+
+<!-- ./loops -->
+
+<!-- macros -->
+
+<!-- TODO: consider documenting macros -->
+
+<!-- ./macros -->
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+* * *
+
+<section class="examples">
+
+### Examples
+
+```c
+// TODO
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -193,7 +306,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
